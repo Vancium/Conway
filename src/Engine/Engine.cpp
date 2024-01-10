@@ -28,7 +28,7 @@ void Engine::Run() {
 
 void Engine::Init() {
   m_GameBoard = std::make_unique<GameBoard>();
-  m_GameBoard->Blinker();
+  m_GameBoard->RandomizeGrid();
   // TODO ask for user input for specific conway pattern, random distrubtion of
   // cells, or create custom board
   if (m_UseSDL) {
@@ -125,7 +125,7 @@ void Engine::Display() {
   if (!m_UseSDL) {
     DisplayTerminal();
   } else {
-    Uint32 timeout = SDL_GetTicks() + 100;
+    Uint32 timeout = SDL_GetTicks() + 50;
     while (!SDL_TICKS_PASSED(SDL_GetTicks(), timeout)) {
       HandleEvents();
       DisplaySDL();
