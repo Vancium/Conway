@@ -125,7 +125,7 @@ void Engine::Display() {
   if (!m_UseSDL) {
     DisplayTerminal();
   } else {
-    Uint32 timeout = SDL_GetTicks() + 50;
+    Uint32 timeout = SDL_GetTicks() + 5;
     while (!SDL_TICKS_PASSED(SDL_GetTicks(), timeout)) {
       HandleEvents();
       DisplaySDL();
