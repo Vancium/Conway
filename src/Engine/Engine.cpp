@@ -1,9 +1,6 @@
 #include "Engine.hpp"
-#include "SDL2/SDL.h"
-#include "SDL2/SDL_events.h"
-#include "SDL2/SDL_log.h"
-#include <cstdio>
-#include <stdexcept>
+#include <iostream>
+#include <memory>
 
 namespace Conway {
 
@@ -15,27 +12,30 @@ Engine::~Engine() {}
 
 void Engine::Run() {
   while (m_Running) {
-    HandleEvents();
-  }
-}
 
-void Engine::HandleEvents() {
-  SDL_Event event;
-
-  while (SDL_PollEvent(&event)) {
-    switch (event.type) {
-    case SDL_KEYDOWN: {
-      m_Running = false;
-    }
-    default:
-      break;
-    }
+    Display();
+    std::cout << "\033[2J\033[1;1H";
   }
 }
 
 void Engine::Init() {
-  if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-    throw ::std::runtime_error("Failed to initialize SDL");
+  m_GameBoard = std::make_unique<GameBoard>();
+  m_GameBoard->Blinker();
+}
+
+void Engine::Display() {
+  std::pair<int, int> gameSize(m_GameBoard->GRID_WIDTH,
+                               m_GameBoard->GRID_HEIGHT);
+  m_GameBoard->Update();
+  for (int y = 0; y < gameSize.first; y++) {
+    for (int x = 0; x < gameSize.second; x++) {
+      if (m_GameBoard->GetCellStatus({x, y}) == CellState::DEAD) {
+        printf(".");
+      } else {
+        printf("X");
+      }
+    }
+    printf("\n");
   }
 }
 

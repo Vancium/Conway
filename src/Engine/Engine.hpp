@@ -1,7 +1,13 @@
 #pragma once
-#include "SDL2/SDL_video.h"
-#include <SDL2/SDL.h>
+#include "../GameBoard/GameBoard.hpp"
+#include <memory>
 #include <string>
+
+/*
+ *  Top level structure, controls, windowing, events, rendering
+ *
+ *
+ * */
 
 namespace Conway {
 
@@ -12,12 +18,12 @@ public:
   void Run();
 
 private:
+  void Display();
   void Init();
-  void HandleEvents();
-  SDL_Window *m_Window;
   std::string m_Title;
   int m_Width;
   int m_Height;
   bool m_Running = true;
+  std::unique_ptr<GameBoard> m_GameBoard;
 };
 } // namespace Conway

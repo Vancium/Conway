@@ -1,14 +1,20 @@
 [
 {
   "directory": "/Users/vance/developer/Conway/Debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/vance/Library/Frameworks/SDL2.framework/Headers -F/Users/vance/Library/Frameworks -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -F /Users/vance/Library/Frameworks/ -o CMakeFiles/Conway.dir/src/main.cpp.o -c /Users/vance/developer/Conway/src/main.cpp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/vance/Library/Frameworks/SDL2.framework/Headers -F/Users/vance/Library/Frameworks -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -F /Users/vance/Library/Frameworks/ -o CMakeFiles/Conway.dir/src/main.cpp.o -c /Users/vance/developer/Conway/src/main.cpp",
   "file": "/Users/vance/developer/Conway/src/main.cpp",
   "output": "CMakeFiles/Conway.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/vance/developer/Conway/Debug",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/vance/Library/Frameworks/SDL2.framework/Headers -F/Users/vance/Library/Frameworks -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -F /Users/vance/Library/Frameworks/ -o CMakeFiles/Conway.dir/src/Engine/Engine.cpp.o -c /Users/vance/developer/Conway/src/Engine/Engine.cpp",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/vance/Library/Frameworks/SDL2.framework/Headers -F/Users/vance/Library/Frameworks -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -F /Users/vance/Library/Frameworks/ -o CMakeFiles/Conway.dir/src/Engine/Engine.cpp.o -c /Users/vance/developer/Conway/src/Engine/Engine.cpp",
   "file": "/Users/vance/developer/Conway/src/Engine/Engine.cpp",
   "output": "CMakeFiles/Conway.dir/src/Engine/Engine.cpp.o"
+},
+{
+  "directory": "/Users/vance/developer/Conway/Debug",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /Users/vance/Library/Frameworks/SDL2.framework/Headers -F/Users/vance/Library/Frameworks -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -F /Users/vance/Library/Frameworks/ -o CMakeFiles/Conway.dir/src/GameBoard/GameBoard.cpp.o -c /Users/vance/developer/Conway/src/GameBoard/GameBoard.cpp",
+  "file": "/Users/vance/developer/Conway/src/GameBoard/GameBoard.cpp",
+  "output": "CMakeFiles/Conway.dir/src/GameBoard/GameBoard.cpp.o"
 }
 ]
