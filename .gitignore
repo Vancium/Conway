@@ -1,0 +1,4 @@
+
+#ignore Directories
+Debug
+.cache
